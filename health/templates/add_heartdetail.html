@@ -1,0 +1,95 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block body %}
+	<!-- register -->
+
+<center>
+
+	<section class="logins py-5">
+		<div class="container py-xl-5 py-lg-3">
+			<div class="title-section mb-md-5 mb-4">
+				<h6 class="w3ls-title-sub"></h6>
+				<br><br>
+				<h3 class="w3ls-title text-uppercase text-dark font-weight-bold">Enter Details</h3>
+			</div><hr/>
+			<div class="login px-sm-12" style="width:100%">
+				<form action="" method="post" enctype="multipart/form-data">
+					{% csrf_token %}
+					<div class="form-group row">
+						<div class="col-md-2">
+						<label>Age</label>
+						<input type="text" class="form-control" name="age"  required="">
+						<small>enter your age</small>
+						</div>
+					<div class="col-md-2">
+						<label>Sex</label>
+						<input type="text" class="form-control" name="sex"  required="">
+						<small>enter 0 or 1</small>
+						</div>
+					<div class="col-md-2">
+						<label>Chest Pain</label>
+						<input type="text" class="form-control" name="cp"  required="">
+						<small>enter numeric value b/w 0 to 4</small>
+						</div>
+					<div class="col-md-2">
+						<label>Resting BP</label>
+						<input type="text" class="form-control" name="trestbps"  required="">
+						<small>enter numeric value </small>
+						</div>
+					<div class="col-md-2">
+						<label>Cholestrol</label>
+						<input type="text" class="form-control" name="chole"  required="">
+						<small>enter numeric value</small>
+						</div>
+					<div class="col-md-2">
+						<label>Fasting BS</label>
+						<input type="text" class="form-control" name="fbs"  required="">
+						<small>enter 0 or 1</small>
+						</div>
+				</div>
+				<div class="form-group row">
+					<div class="col-md-2">
+						<label>ECG</label>
+						<input type="text" class="form-control" name="restecg"  required="">
+						<small>enter 0 or 1</small>
+						</div>
+					<div class="col-md-2">
+						<label>Max Heart Rate</label>
+						<input type="text" class="form-control" name="thalach"  required="">
+						<small>enter actual heart rate</small>
+						</div>
+					<div class="col-md-2">
+						<label>Exercise Induced</label>
+						<input type="text" class="form-control" name="exang"  required="">
+						<small>enter 0 or 1</small>
+						</div>
+					<div class="col-md-2">
+						<label>Oldpeak</label>
+						<input type="text" class="form-control" name="old_peak"  required="">
+						<small>enter fractional value</small>
+						</div>
+					<div class="col-md-2">
+						<label>Slope</label>
+						<input type="text" class="form-control" name="slope"  required="">
+						<small>enter numeric value b/w 0 to 3</small>
+						</div>
+					<div class="col-md-2">
+						<label>Cardiac Arrest</label>
+						<input type="text" class="form-control" name="ca"  required="">
+						<small>enter 0 or 1</small>
+					</div>
+				</div>
+					<div class="col-md-2">
+						<label>Thalssemia</label>
+						<input type="text" class="form-control" name="thal"  required="">
+						<small>enter numeric value b/w 0 to 4</small>
+						</div>
+
+					<button type="submit" class="btn submit mt-4" style="background-color: #726f6e;">Send Heart data</button>
+				</form>
+			</div>
+		</div>
+	</section>
+	<!-- //register -->
+</center>
+{% endblock %}
